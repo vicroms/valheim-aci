@@ -68,6 +68,12 @@
         "valheimServerPassword": {
             "type": "securestring"
         },
+        "valheimServerPublic": {
+            "type": "int"
+        },
+        "enableValheimPlus": {
+            "type": "bool"
+        },
         "ports": {
             "type": "array",
             "defaultValue": [
@@ -167,6 +173,14 @@
                                 {
                                     "name": "WORLD_NAME",
                                     "value": "[parameters('valheimWorldName')]"
+                                },
+                                {
+                                    "name": "SERVER_PUBLIC",
+                                    "value": "[parameters('valheimServerPublic')]"
+                                },
+                                {
+                                    "name": "VALHEIM_PLUS",
+                                    "value": "[parameters('enableValheimPlus')]"
                                 }
                             ],
                             "ports": "[parameters('ports')]",
